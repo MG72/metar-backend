@@ -1,6 +1,12 @@
 import express from "express";
 import cors from "cors";
-import fetch from "node { KNMI_API_KEY } from "./config/knmi.js";import fetch from "node-fetch";
+import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
+import { XMLParser } from "fast-xml-parser";
+
+import { KNMI_API_KEY } from "./config/knmi.js";
+
 
 // =====================
 // App setup
