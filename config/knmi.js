@@ -1,0 +1,2 @@
+// metar-backend/config/knmi.js
+export const KNMI_API_KEY = "eyJvcmciOiI1ZTU1NGUxOTI3NGE5NjAwMDEyYTNlYjEiLCJpZCI6Ijc5MjAyOGEzMWY3ZTRiOTJiY2I0NDA1MTkwZmYwYjYxIiwiaCI6Im11cm11cjEyOCJ9";
