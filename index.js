@@ -281,7 +281,3 @@ app.get("/metar.geojson", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`METAR backend actief op poort ${PORT}`);
 });
-import fs from "fs";
-import path from "path";
-import { XMLParser } from "fast-xml-parser";
-
