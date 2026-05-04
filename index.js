@@ -278,6 +278,34 @@ app.get("/metar.geojson", async (req, res) => {
   }
 });
 
+// ======================
+// KNMI proxy endpoints
+// ======================
+
+// Lijst METAR bestanden
+app.get("/api/metar/files", async (req, res) => {
+  try {
+    const url = `${FILES_URL}?orderBy=created&sorting=desc`;
+    const data = await fetchJson(url);
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Download-URL voor bestand
+app.get("/api/metar/file-url/:filename", async (req, res) => {
+  try {
+    const filename = req.params.filename;
+    const meta = await fetchJson(
+      `${FILES_URL}/${encodeURIComponent(filename)}/url`
+    );
+    res.json(meta);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`METAR backend actief op poort ${PORT}`);
 });
