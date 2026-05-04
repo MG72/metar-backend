@@ -49,9 +49,7 @@ const STATIONS = {
   EHGG: { lon: 6.5794, lat: 53.1197 },
   EHEH: { lon: 5.3745, lat: 51.4501 },
   EHBK: { lon: 5.7700, lat: 50.9117 },
-  EHLE: { lon: 5.5217, lat: 51.4428 }, 
-  EHMA: { lon: 5.2200, lat: 52.1700 },
-  EHWO: { lon: 5.5492, lat: 51.8133 }
+  EHLE: { lon: 5.5272, lat: 52.4603 }
 };
 
 // =====================
